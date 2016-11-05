@@ -12,7 +12,7 @@
   <h3>Command Line Commands</h3>
   <% $list.each do |elem| %>
     <div class="elem_list">
-      <a href="/find/<%= elem %>"><li><p><%= elem %></p></li></a>
+      <a href="/print?print_button=<%= elem %>"><li><p><%= elem %></p></li></a>
       <!-- <a href="/list/?id=<%= elem %>"><button name="<%= elem %>" value="OK" type="button">Erase</button></a> -->
     </div>
   <% end %>

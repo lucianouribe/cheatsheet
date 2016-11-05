@@ -1,0 +1,7 @@
+<div class="grid">
+  <form method="post" action="/find">
+    <input class="input" name="user_input" placeholder="Command to find" required/>
+    <input class="submit" type="submit" name="submit" value="Submit" />
+  </form>
+  <textarea class="output">The requested data is: <%= `man #{@command_to_find}` %></textarea>
+</div>

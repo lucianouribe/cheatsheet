@@ -7,10 +7,7 @@ get '/' do
   erb :index
 end
 
-# get '/list' do
-#   erb :list
-# end
-
+# List
 get '/list' do
   $list
   erb :list
@@ -22,6 +19,13 @@ post '/list' do
   erb :list
 end
 
+#print
+get '/print' do
+  @command_to_find = params[:print_button]
+  erb :print
+end
+
+
 delete '/list/' do
   delete_me = params[:id]
   binding.pry
@@ -29,23 +33,27 @@ delete '/list/' do
   erb :list
 end
 
+# find
 get '/find' do
   erb :find
 end
 
-post '/find/:user_input' do
+post '/find' do
   @command_to_find = params[:user_input]
   erb :find
 end
 
+# add
 get '/add' do
   erb :add
 end
 
+# export
 get '/export' do
   erb :export
 end
 
+# erase
 get '/erase' do
   erb :erase
 end
